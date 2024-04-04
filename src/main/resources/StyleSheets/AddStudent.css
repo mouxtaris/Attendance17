@@ -1,0 +1,60 @@
+/*.anchorPane {*/
+/*    -fx-background-color: linear-gradient(to bottom, #a9c15c 0%, #DDDDDD 100%);*/
+/*}*/
+/*.anchorPane {*/
+/*    -fx-background-color: linear-gradient(to bottom, #86c3c5 0%, #DDDDDD 100%);*/
+/*}*/
+.anchorPane {
+    /*-fx-background-color: linear-gradient(to bottom, #97BF18 0%, #DDDDDD 100%);*/
+    -fx-background-color: #97BF18;
+}
+
+/*.button {*/
+/*    -fx-background-color: linear-gradient(to right, #c87ba6, #EEEEEE);*/
+/*    -fx-text-fill: #111;*/
+/*}*/
+
+/*.button:hover {*/
+/*    -fx-background-color: linear-gradient(to right, #EEEEEE, #c87ba6);*/
+/*}*/
+
+.button {
+    -fx-background-color: #c87ba6;
+    -fx-text-fill: #ffffff;
+    /*-fx-font-weight: bold italic;*/
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.2, 0.3, 5); /* Shadow effect */
+
+}
+
+.button:hover {
+    -fx-background-color: #d090b4;
+    -fx-text-fill: #ffffff; /* Text color on hover */
+    -fx-border-color: transparent; /* Border color on hover */
+    -fx-effect: dropshadow(three-pass-box, #ffffff, 10, 0, 0, 0); /* Neon shadow */
+}
+
+#addBtn {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold italic;
+}
+
+#addBtn:hover{
+    -fx-pref-width: 105;
+    -fx-pref-height: 35;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold italic;
+    -fx-font-size: 16px;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.2, 0.3, 5);
+}
+.text-area{
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.2, 0.3, 5);
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+}

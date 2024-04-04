@@ -1,0 +1,70 @@
+
+.anchorPane {
+    /*-fx-background-color: linear-gradient(to bottom, #accdcf 0%, #DDDDDD 100%);*/
+    -fx-background-color: #97BF18;
+}
+
+.button {
+    -fx-background-color: #c87ba6;
+    -fx-text-fill: #ffffff;
+    /*-fx-font-weight: bold italic;*/
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.2, 0.3, 5); /* Shadow effect */
+
+}
+
+.button:hover {
+    -fx-background-color: #d090b4;
+    -fx-text-fill: #ffffff; /* Text color on hover */
+    -fx-border-color: transparent; /* Border color on hover */
+    -fx-effect: dropshadow(three-pass-box, #ffffff, 10, 0, 0, 0); /* Neon shadow */
+}
+
+#openBtn {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold italic;
+}
+
+.table-view{
+    -fx-background-radius: 25 25 0 0;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-radius: 75px;
+    -fx-background-color: #c87ba6;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-radius: 50px;
+    -fx-background-color: #c87ba6;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff; /* Change to your desired text color */
+}
+
+.table-row-cell {
+    -fx-background-color: #fdf3ff;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: lightblue;
+}
+
+.table-row-cell:selected .table-cell{
+    -fx-text-fill: rgba(17, 17, 17, 0.82);
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+}
