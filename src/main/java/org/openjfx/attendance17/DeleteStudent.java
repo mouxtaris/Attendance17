@@ -31,7 +31,7 @@ public class DeleteStudent implements Serializable {
 
     public void openMain(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Παρουσίες");
         scene = new Scene(root);
         stage.setResizable(false);
