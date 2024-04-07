@@ -25,9 +25,17 @@ public class AddStudent implements Serializable {
     @FXML
     TextField dateBirthTextField;
     @FXML
+    TextField sessionTextField;
+    @FXML
+    TextField amkaTextField;
+    @FXML
     TextArea diagnosisTextArea;
     @FXML
-    private TextField amkaTextField;
+    TextField expDateTextField;
+    @FXML
+    TextField paymentTextField;
+
+
 
     private Stage stage;
     private Scene scene;
@@ -68,10 +76,13 @@ public class AddStudent implements Serializable {
         String name = nameTextField.getText();
         String lastname = lastNameTextField.getText();
         String birthday = dateBirthTextField.getText();
-        String diagnosis = diagnosisTextArea.getText();
         String amka = amkaTextField.getText();
+        String session = sessionTextField.getText();
+        String diagnosis = diagnosisTextArea.getText();
+        String expDate = expDateTextField.getText();
+        String payment = paymentTextField.getText();
 
-        Students student = new Students(name, lastname, birthday, amka,diagnosis);
+        Students student = new Students(name, lastname, birthday, amka, session, expDate, payment, diagnosis);
 
         ArrayList<Students> studentsList = new ArrayList<>();
         studentsList.add(student);
@@ -93,6 +104,9 @@ public class AddStudent implements Serializable {
         dateBirthTextField.clear();
         diagnosisTextArea.clear();
         amkaTextField.clear();
+        sessionTextField.clear();
+        paymentTextField.clear();
+        expDateTextField.clear();
 
     }
 }

@@ -71,6 +71,15 @@ public class Attendance implements Serializable {
     @FXML
     private TableColumn<Students, String> amkaCol;
 
+    @FXML
+    private TableColumn<Students, String> sessionCol;
+
+    @FXML
+    private TableColumn<Students, String> expDateCol;
+
+    @FXML
+    private TableColumn<Students, String> paymentCol;
+
     // Load data into the TableView during initialization or when needed
     @FXML
     private void initialize() {
@@ -95,6 +104,9 @@ public class Attendance implements Serializable {
             lastNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getLastName()));
             birthdayCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getBirthday()));
             amkaCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAmka()));
+            sessionCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getSession()));
+            expDateCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getExpDate()));
+            paymentCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPayment()));
 
         } else {
             // Display an alert or message indicating that no data is available

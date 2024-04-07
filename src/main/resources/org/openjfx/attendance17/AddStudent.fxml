@@ -22,17 +22,17 @@
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
-        <Label layoutX="114.0" layoutY="70.0" text="Προσθήκη Μαθητή" textAlignment="CENTER">
+        <Label layoutX="114.0" layoutY="50.0" text="Προσθήκη Μαθητή" textAlignment="CENTER">
             <font>
                 <Font name="Arial" size="23.0" />
             </font>
         </Label>
-        <Label fx:id="kidName" layoutX="38.0" layoutY="125.0" text="Όνομα:" textAlignment="CENTER">
+        <Label fx:id="kidName" layoutX="38.0" layoutY="115.0" text="Όνομα:" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label fx:id="kidLName" layoutX="38.0" layoutY="165.0" text="Επώνυμο:" textAlignment="CENTER">
+        <Label fx:id="kidLName" layoutX="38.0" layoutY="160.0" text="Επώνυμο:" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
@@ -42,21 +42,24 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label fx:id="amkaLabel" layoutX="38.0" layoutY="245.0" text="ΑΜΚΑ:">
+        <Label fx:id="amkaLabel" layoutX="38.0" layoutY="250.0" text="ΑΜΚΑ:">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label fx:id="kidDiagnosis" layoutX="38.0" layoutY="285.0" text="Διάγνωση:" textAlignment="CENTER">
+        <Label fx:id="kidDiagnosis" layoutX="38.0" layoutY="295.0" text="Διάγνωση:" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField id="textField" fx:id="nameTextField" layoutX="130.0" layoutY="125.0" styleClass="textField" />
-        <TextField id="textField" fx:id="lastNameTextField" layoutX="130.0" layoutY="165.0" styleClass="textField" />
-        <TextField id="textField" fx:id="dateBirthTextField" layoutX="130.0" layoutY="205.0" styleClass="textField" />
-        <TextField id="textField" fx:id="amkaTextField" layoutX="130.0" layoutY="245.0" styleClass="textField" />
-        <TextArea fx:id="diagnosisTextArea" layoutX="130.0" layoutY="285.0" prefHeight="210.0" prefWidth="250.0" styleClass="textArea" wrapText="true" />
+        <TextField id="textField" fx:id="nameTextField" layoutX="130.0" layoutY="115.0" prefWidth="130.0" styleClass="textField" />
+        <TextField id="textField" fx:id="lastNameTextField" layoutX="130.0" layoutY="160.0" prefWidth="130.0" styleClass="textField" />
+        <TextField id="textField" fx:id="dateBirthTextField" layoutX="130.0" layoutY="205.0" prefHeight="25.0" prefWidth="130.0" styleClass="textField" />
+        <TextField id="textField" fx:id="amkaTextField" layoutX="130.0" layoutY="250.0" prefHeight="25.0" prefWidth="130.0" styleClass="textField" />
+        <TextField fx:id="expDateTextField" layoutX="290.0" layoutY="130.0" prefWidth="100.0" />
+        <TextField fx:id="paymentTextField" layoutX="290.0" layoutY="190.0" prefWidth="100.0" />
+        <TextField fx:id="sessionTextField" layoutX="290.0" layoutY="250.0" prefWidth="100.0" />
+        <TextArea fx:id="diagnosisTextArea" layoutX="130.0" layoutY="295.0" prefHeight="200.0" prefWidth="250.0" styleClass="textArea" wrapText="true" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="30.0" />
         <Button id="addBtn" fx:id="addButton" layoutX="153.0" layoutY="520.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="35.0" prefWidth="105.0" style="-fx-background-radius: 20;" stylesheets="@../../../StyleSheets/AddStudent.css" text="Προσθήκη" textAlignment="CENTER">
             <font>
                 <Font size="16.0" />
@@ -65,5 +68,22 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
+      <Label layoutX="307.0" layoutY="230.0" text="Θεραπείες:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="324.0" layoutY="110.0" text="Λήξη:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="170.0" text="Πληρωμή:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
     </children>
 </AnchorPane>

@@ -145,5 +145,36 @@ public class FileManager {
         }
     }
 
+    public void updatePayment(String amka, String newPayment) {
+        // Read the list of students from file
+        List<Students> studentsList = readStudentsFromFile();
+
+        if (studentsList != null) {
+            // Find the student with the specified AMKA
+            for (Students student : studentsList) {
+                if (student.getAmka().equals(amka)) {
+                    // Update the diagnosis
+                    student.setPayment(newPayment);
+                    // Save the updated list back to the file
+                    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(studentsFile))) {
+                        oos.writeObject(studentsList);
+                        System.out.println("Diagnosis updated for student with AMKA: " + amka);
+                        return; // Exit the method after updating the diagnosis
+                    } catch (IOException e) {
+                        System.err.println("Error writing to file: " + e.getMessage());
+                        return; // Exit the method if an error occurs
+                    }
+                }
+            }
+            System.err.println("Student with AMKA " + amka + " not found."); // Debugging message
+        } else {
+            System.err.println("Error reading students list from file"); // Debugging message
+        }
+    }
+
 }
+
+
+
+
 

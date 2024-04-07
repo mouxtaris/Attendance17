@@ -10,13 +10,21 @@ public class Students extends AddStudent implements Serializable {
     private String birthday;
     private String diagnosis;
     private String amka;
+    private String session;
+    private String expDate;
+    private String payment;
 
-    public Students(String name, String lastName, String birthday,String amka, String diagnosis) {
+
+
+    public Students(String name, String lastName, String birthday, String amka, String session, String expDate, String payment, String diagnosis) {
         this.name = name;
         this.lastName = lastName;
         this.birthday = birthday;
         this.amka = amka;
         this.diagnosis = diagnosis;
+        this.session = session;
+        this.expDate = expDate;
+        this.payment = payment;
     }
 
     public Students() {
@@ -56,6 +64,16 @@ public class Students extends AddStudent implements Serializable {
     }
 
     public String getAmka(){return amka;}
+
+    public String getSession(){return session;}
+
+    public void setSession(String session){this.session = session;}
+
+    public String getExpDate() {return expDate;}
+
+    public String getPayment() {return payment;}
+
+    public void setPayment(String payment){this.payment = payment;}
 
     @Override
     public boolean equals(Object o) {

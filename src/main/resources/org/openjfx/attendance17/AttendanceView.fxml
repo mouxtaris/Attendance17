@@ -21,7 +21,7 @@
         <TextField fx:id="lastNameTextField" layoutX="206.0" layoutY="65.0" promptText="Επώνυμο" AnchorPane.rightAnchor="25.0" />
         <TextField fx:id="birthdayTextField" layoutX="14.0" layoutY="115.0" promptText="Ημ. Γέννησης" AnchorPane.leftAnchor="25.0" />
         <TextField fx:id="amkaTextField" layoutX="206.0" layoutY="115.0" promptText="ΑΜΚΑ" AnchorPane.rightAnchor="25.0" />
-        <TextArea fx:id="diagnosisTextArea" layoutX="15.0" layoutY="155.0" prefHeight="100.0" prefWidth="345.0" promptText="Διάγνωση" wrapText="true" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+        <TextArea fx:id="diagnosisTextArea" layoutX="15.0" layoutY="155.0" prefHeight="100.0" prefWidth="250.0" promptText="Διάγνωση" wrapText="true" AnchorPane.leftAnchor="25.0" />
         <TableView fx:id="attendanceViewTable" editable="true" prefHeight="260.0" prefWidth="300.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
             <columns>
                 <TableColumn fx:id="logColumn" prefWidth="95.0" text="Λογοθεραπεία" />
@@ -57,6 +57,9 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button fx:id="updateDiagnosisBtn" layoutX="213.0" layoutY="255.0" mnemonicParsing="false" onAction="#updateDiagnosis" style="-fx-background-radius: 20;" text="Ενημέρωση Διάγνωσης" />
+        <Button fx:id="updateDiagnosisBtn" layoutX="135.0" layoutY="255.0" mnemonicParsing="false" onAction="#updateDiagnosis" style="-fx-background-radius: 20;" text="Ενημέρωση Διάγνωσης" />
+      <Label layoutX="302.0" layoutY="170.0" text="Πληρωμή:" />
+      <TextField fx:id="payTextField" layoutX="290.0" layoutY="190.0" prefWidth="80.0" />
+      <Button fx:id="payButton" layoutX="290.0" layoutY="220.0" mnemonicParsing="false" onAction="#updatePayment" style="-fx-background-radius: 20;" text="Ενημέρωση" />
     </children>
 </AnchorPane>

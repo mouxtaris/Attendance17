@@ -27,6 +27,9 @@ public class AttendanceView {
     @FXML
     private TextField nameTextField;
 
+    @FXML
+    private TextField payTextField;
+
     public void displayStudentDetails(Students selectedStudent) {
         if (selectedStudent != null) {
             // Set the name
@@ -43,11 +46,14 @@ public class AttendanceView {
 
             birthdayTextField.setText(selectedStudent.getBirthday());
 
+            payTextField.setText(selectedStudent.getPayment());
+
             nameTextField.setEditable(false);
             lastNameTextField.setEditable(false);
             diagnosisTextArea.setEditable(true);
             amkaTextField.setEditable(false);
             birthdayTextField.setEditable(false);
+            payTextField.setEditable(true);
 
         }
     }
@@ -172,6 +178,12 @@ public class AttendanceView {
         filemanager.appendListToFile(dataList, amkaTextField.getText());
         loadAttendanceIntoTableView(amkaTextField.getText());
 
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText(null);
+        alert.setContentText("Οι παρουσίες αποθηκεύτηκαν");
+        alert.showAndWait();
+
     }
 
     @FXML
@@ -179,7 +191,23 @@ public class AttendanceView {
 
         FileManager fileManager = new FileManager();
         fileManager.updateDiagnosis(amkaTextField.getText(), diagnosisTextArea.getText());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText(null);
+        alert.setContentText("Η διάγνωση αποθηκεύτηκε!");
+        alert.showAndWait();
 
+    }
+
+    @FXML
+    public void updatePayment(){
+        FileManager fileManager = new FileManager();
+        fileManager.updatePayment(amkaTextField.getText(), payTextField.getText());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText(null);
+        alert.setContentText("Η πληρωμή αποθηκεύτηκε!");
+        alert.showAndWait();
     }
 
 }
