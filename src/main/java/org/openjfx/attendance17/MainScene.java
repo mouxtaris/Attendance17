@@ -27,22 +27,3 @@ public class MainScene extends Application {
     public static void main(String[] args){launch(args);}
 
 }
-
-
-//module org.openjfx.attendance17 {
-//    requires javafx.controls;
-//    requires javafx.fxml;
-//
-//
-//    opens org.openjfx.attendance17 to javafx.fxml;
-//    exports org.openjfx.attendance17;
-//}
-
-
-
-
-
-
-
-
-
